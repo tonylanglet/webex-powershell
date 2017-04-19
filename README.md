@@ -6,6 +6,13 @@ The following repository of scripts are created using Powershell and has been ba
 
 You can either capsule the scripts into a function or add mandatory=$true in front of the parameters which is required for your script and run the script. If the script requires a specific parameter the parameter will be set to mandatory. 
 
+__The following versions is confirmed working__
+WebEx Site type: Enterprise
+WebEx Service version: WBS32
+WebEx Page version: 32.0.6.4
+WebEx Client version: 32.0.0.129
+Powershell version: 3.0
+
 ### Prerequisits
 * WebEx company site
 * Access to WebEx enterprise settings information
