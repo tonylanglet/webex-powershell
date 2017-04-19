@@ -12,7 +12,7 @@ You can either capsule the scripts into a function or add mandatory=$true in fro
 * Site Admin account
 
 ## Confirmed versions
-The following version of applications required for the scripts to work has been tested and are verified confirmed working. 
+The following version of applications required for the scripts to work has been tested and are verified working. 
 
 ### WebEx
 | Site type  | Service version | Page version | Client version | 
