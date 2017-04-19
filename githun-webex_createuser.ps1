@@ -238,28 +238,15 @@ $XML = [xml]$XMLString
     $XMLResponse = [xml]$URLResponse
 
     #Read through the XML file and create a PS Customeobject
-    $XMLNodes = $XMLResponse.SelectNodes("//*")
-    $XMLResult = $XMLNodes | ForEach-Object {
-        $nodeDisplayName = $_.LocalName 
-        $nodeValue = $_.'#text'
-        
-        [pscustomobject]@{DisplayName = $nodeDisplayName; Value = $nodeValue}
+    if ($XMLResponse.ChildNodes.header.response.result -eq "SUCCESS"){
+        Write-Host "Webex Result: "$XMLResponse.ChildNodes.header.response.result
+        Write-Host "Webex: Created user [$user_WebexID]"
+    } else {
+        Write-Host "Webex Result: "$XMLResponse.ChildNodes.header.response.result
     }
 
-    # Response Result and Reason from XML
-    foreach ($node in $XMLResult) {
-       $nodeKey = $node.DisplayName
-       $nodeValue = $node.Value
-        if ($nodeKey -eq "result") {
-            Write-Host "Webex result: $nodeValue"
-            
-            if ($nodeValue -eq "SUCCESS") {
-                Write-Host "Webex: Created user [$user_WebexID]" 
-            }
-        }
-        if ($nodeKey -eq "reason") {
-            Write-Host "Webex reason: $nodeValue"
-        }
+    if ($XMLResponse.ChildNodes.header.response.reason) {
+        Write-Host "Webex Reason: "$XMLResponse.ChildNodes.header.response.reason
     }
     #endregion
 
