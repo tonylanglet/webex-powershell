@@ -6,24 +6,30 @@ The following repository of scripts are created using Powershell and has been ba
 
 You can either capsule the scripts into a function or add mandatory=$true in front of the parameters which is required for your script and run the script. If the script requires a specific parameter the parameter will be set to mandatory. 
 
-__The following versions is confirmed working__
-WebEx Site type: Enterprise
-WebEx Service version: WBS32
-WebEx Page version: 32.0.6.4
-WebEx Client version: 32.0.0.129
-Powershell version: 3.0
-
-### Prerequisits
+## Prerequisits
 * WebEx company site
 * Access to WebEx enterprise settings information
 * Site Admin account
 
-### To-do
+## Confirmed versions
+The following version of applications required for the scripts to work has been tested and are verified confirmed working. 
+
+### WebEx
+| Site type  | Service version | Page version | Client version | 
+| ---------- |:---------------:|:------------:|:--------------:|
+| Enterprise | WBS32           | 32.0.6.4     | 32.0.0.129     |
+
+### Powershell
+| Powershell Version |
+|:------------------:|
+| 3.0                |
+
+## To-do
 * Add synposis to all scripts
 * Update readme file
 * Add more scripts which has to be converted to readable scripts before added
 
-### References
+## References
 
 [Cisco WebEx XML API - Developer site](https://developer.cisco.com/media/webex-xml-api/Preface.html "XML API")
 
