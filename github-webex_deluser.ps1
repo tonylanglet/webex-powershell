@@ -50,7 +50,7 @@ if ($RunEnabled -eq $true) {
     # Response Result and Reason from XML
     if ($XMLResponse.ChildNodes.header.response.result -eq "SUCCESS"){
         Write-Host "Webex Result: "$XMLResponse.ChildNodes.header.response.result
-        Write-Host "Webex: Removed recording [$rec_recordingID]"
+        Write-Host "Webex: Inactivated user [$user_WebexUserID]"
     } else {
         Write-Host "Webex Result: "$XMLResponse.ChildNodes.header.response.result
     }
